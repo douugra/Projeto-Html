@@ -1,0 +1,4 @@
+@chatApi_HostAddress = http://localhost:5079
+
+GET {{chatApi_HostAddress}}/chat/
+Accept: application/json
