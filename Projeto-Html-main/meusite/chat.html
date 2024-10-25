@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="chat.css"> <!-- Seu arquivo CSS -->
+    <script src="chat.js"></script>  
+    <title>Chat HELP</title>
+</head>
+<body>
+
+<h1 class="chat-title">Chat HELP</h1> <!-- Título fora do contêiner de chat -->
+
+<div class="chat-container">
+    <div class="messages" id="messages">
+        <!-- Mensagens aparecerão aqui -->
+        <div class="message">Olá! Como posso ajudar você?</div>
+    </div>
+    <div class="input-container">
+        <input type="text" id="nickname" placeholder="Seu Apelido">
+        <input type="text" id="message" placeholder="Sua mensagem">
+        <button onclick="enviarMensagen()">Enviar</button>
+    </div>
+</div>
+
+<!-- Botão para voltar ao menu -->
+<button id="buttonIndex" type="button" onclick="location.href='index.html'" class="menu-button">Voltar ao Menu</button>
+
+<script>
+    setInterval(carregarMensagens, 3000); // Chama a função para carregar mensagens a cada 3 segundos
+</script>
+
+</body>
+</html>

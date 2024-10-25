@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criar Novo Produto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="styles.css">
+    <script src="criarProduto.js" defer></script> <!-- Usar defer para garantir que o JS carregue após o HTML -->
+</head>
+<body>
+    <header>
+        <h1>Criar Novo Produto</h1>
+    </header>
+    
+    <div class="container">
+        <div id="formDiv">
+            <form>
+                <div>
+                    <label for="inputNome"><strong class="texto-destaque">Nome do produto:</strong></label>
+                    <input id="inputNome" type="text" required>
+                </div>
+                <div>
+                    <label for="inputFabricante"><strong class="texto-destaque">Fabricante:</strong></label>
+                    <input id="inputFabricante" type="text" required>
+                </div>
+                <div>
+                    <label for="inputPrecoCompra"><strong class="texto-destaque">Preço de compra:</strong></label>
+                    <input id="inputPrecoCompra" type="number" step="0.01" required>
+                </div>
+                <div>
+                    <label for="inputPrecoVenda"><strong class="texto-destaque">Preço de venda:</strong></label>
+                    <input id="inputPrecoVenda" type="number" step="0.01" required>
+                </div>
+                <div class="button-group">
+                    <button id="buttonOk" type="button" onclick="criarProduto()">Ok</button>
+                    <button id="buttonCancelar" type="button" onclick="clearForm()">Cancelar</button> <!-- Função para limpar o formulário -->
+                    <button id="buttonLimpar" type="button" onclick="limparLista()">Limpar</button> <!-- Botão Limpar -->
+                </div>
+            </form>
+        </div>
+
+        <div id="listDiv"></div> <!-- Lista de produtos adicionados -->
+    </div>
+
+    <div>
+        <button id="buttonIndex" type="button" onclick="location.href='index.html'">Voltar ao Menu</button>
+    </div>
+
+    <script>
+        // Função para limpar o formulário
+        function clearForm() {
+            document.getElementById("inputNome").value = "";
+            document.getElementById("inputFabricante").value = "";
+            document.getElementById("inputPrecoCompra").value = "";
+            document.getElementById("inputPrecoVenda").value = "";
+        }
+
+        // Função para limpar a lista de produtos
+        function limparLista() {
+            document.getElementById("listDiv").innerHTML = ""; // Limpa o conteúdo da lista
+        }
+    </script>
+</body>
+</html>

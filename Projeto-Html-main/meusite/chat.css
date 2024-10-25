@@ -1,0 +1,105 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(../photo-1678483789105-2720201bee03.jpg);
+    background-color: #000000;
+    background-repeat: no-repeat;
+    background-size: cover; /* Para melhor ajuste da imagem */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Alinha ao topo */
+    height: 100vh;
+    margin: 0; /* Remove margens padrão */
+}
+
+.chat-title {
+    text-align: center; /* Centraliza o título */
+    font-size: 48px; /* Tamanho grande para o título */
+    color: rgba(255, 255, 255, 0.8); /* Cor do texto */
+    margin: 20px 0; /* Espaçamento em cima e embaixo */
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7); /* Sombra para dar destaque */
+    font-weight: bold; /* Texto em negrito */
+    width: 100%; /* Largura total */
+}
+
+.chat-container {
+    border: 1px solid rgba(0, 130, 255, 0.8); /* Altera a borda para azul */
+    box-shadow: 0 4px 20px rgba(0, 130, 255, 0.5); /* Altera a sombra para azul */
+    backdrop-filter: blur(10px);
+    width: 500px;
+    max-width: 90%;
+    height: 400px;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: aliceblue;
+    border-radius: 15px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.messages {
+    flex-grow: 1; /* Para que a área de mensagens expanda */
+    overflow-y: auto; /* Rola verticalmente quando necessário */
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.message {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.message:last-child {
+    border-bottom: none;
+}
+
+.input-container {
+    display: flex;
+    justify-content: space-between; /* Para posicionar o botão e os campos */
+    margin-top: 10px;
+}
+
+input[type="text"] {
+    flex-grow: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-right: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    outline: none;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50; /* Verde para o botão de enviar */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #45a049; /* Verde mais escuro ao passar o mouse */
+}
+
+.menu-button {
+    margin-top: 20px; /* Espaçamento acima do botão */
+    padding: 10px 20px; /* Preenchimento do botão */
+    border: none; /* Sem borda */
+    border-radius: 5px; /* Cantos arredondados */
+    background-color: #020d8b; /* Azul para o botão de menu */
+    color: white; /* Texto branco */
+    font-size: 16px; /* Tamanho da fonte */
+    cursor: pointer; /* Cursor de ponteiro ao passar o mouse */
+    transition: background-color 0.3s; /* Transição suave */
+}
+
+.menu-button:hover {
+    background-color: #004a9d; /* Azul mais escuro ao passar o mouse */
+}
